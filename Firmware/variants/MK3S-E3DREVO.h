@@ -1,6 +1,9 @@
 #ifndef CONFIGURATION_PRUSA_H
 #define CONFIGURATION_PRUSA_H
 
+// Bear extruder calibration:
+// https://guides.bear-lab.com/Guide/5.+Final+adjustments+and+calibration/14?lang=en
+
 #include <limits.h>
 #include "printers.h"
 /*------------------------------------
@@ -25,7 +28,7 @@
 #define HAS_SECOND_SERIAL_PORT
 
 // PSU
-// #define PSU_Delta                                 // uncomment if DeltaElectronics PSU installed
+#define PSU_Delta                                 // uncomment if DeltaElectronics PSU installed
 
 
 // Uncomment the below for the E3D PT100 temperature sensor (with or without PT100 Amplifier)
@@ -67,7 +70,8 @@
 #define Z_MIN_POS 0.15
 
 // Z height correction value
-#define Z_MAX_POS_XYZ_CALIBRATION_CORRECTION 9
+// https://github.com/bear-lab-3d/Prusa-Firmware/releases/tag/BEARCAL_3.10.1_f19c3a
+#define Z_MAX_POS_XYZ_CALIBRATION_CORRECTION 2
 
 // Canceled home position
 #define X_CANCEL_POS 50
@@ -314,7 +318,7 @@
 #endif
 #define SUPERPINDA_SUPPORT
 #define PINDA_MINTEMP 10
-//#define PINDA_TEMP_COMP //Used to enable SuperPINDA toggle menu/function
+#define PINDA_TEMP_COMP //Used to enable SuperPINDA toggle menu/function
 #define AMBIENT_MINTEMP -30
 
 // Maxtemps
@@ -349,7 +353,7 @@
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 50
 #define EXTRUDER_AUTO_FAN_SPEED   255  // == full speed
 #define EXTRUDER_ALTFAN_DETECT
-#define EXTRUDER_ALTFAN_SPEED_SILENT 128
+#define EXTRUDER_ALTFAN_SPEED_SILENT 255  // == full speed
 
 #define FANCHECK_AUTO_PRINT_FAN_THRS 70 //[RPS] - Used during selftest to identify swapped fans automatically
 #define FANCHECK_AUTO_FAIL_THRS 20 //[RPS] - Used during selftest to identify a faulty fan
@@ -382,7 +386,7 @@
 //Retract and then extrude some filament to prevent oozing.
 //After the loading sequence and after a print is canceled, the filament is retracted to get it out of the heat zone of the nozzle.
 //Then a small extrusion is performed to make sure the filament is close enough for the next print without oozing.
-//#define COMMUNITY_PREVENT_OOZE
+#define COMMUNITY_PREVENT_OOZE
 #ifdef COMMUNITY_PREVENT_OOZE
 #define FILAMENTCHANGE_COMMUNITY_ROOZEFEED -10 //E retract distance in mm for ooze prevention
 #define FILAMENTCHANGE_COMMUNITY_EOOZEFEED 4 //E extrude distance in mm for ooze prevention
@@ -427,7 +431,7 @@
  HOST FEATURES
  *------------------------------------*/
 
-// Uncomment if the host supports '//action:shutdown'. It will add "Shutdown host" to the LCD meun. 
+// Uncomment if the host supports '//action:shutdown'. It will add "Shutdown host" to the LCD meun.
 //#define HOST_SHUTDOWN
 
 // Uncomment if the host doesn't support '//action:ready' & '//action:notready'.
