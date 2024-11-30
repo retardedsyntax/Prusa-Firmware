@@ -28,7 +28,7 @@
 #define HAS_SECOND_SERIAL_PORT
 
 // PSU
-#define PSU_Delta                                 // uncomment if DeltaElectronics PSU installed
+//#define PSU_Delta                                 // uncomment if DeltaElectronics PSU installed
 
 
 // Uncomment the below for the E3D PT100 temperature sensor (with or without PT100 Amplifier)
@@ -353,7 +353,7 @@
 
 // Extruder cooling fans
 #define EXTRUDER_0_AUTO_FAN_PIN   8
-#define EXTRUDER_AUTO_FAN_TEMPERATURE 45
+#define EXTRUDER_AUTO_FAN_TEMPERATURE 50
 #define EXTRUDER_AUTO_FAN_SPEED   255  // == full speed
 #define EXTRUDER_ALTFAN_DETECT
 #define EXTRUDER_ALTFAN_SPEED_SILENT 255  // == full speed
