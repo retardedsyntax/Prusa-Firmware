@@ -338,9 +338,9 @@
 #define  DEFAULT_Kd 73.76
 #else
 // Define PID constants for E3D REVO
-#define  DEFAULT_Kp 25.00
-#define  DEFAULT_Ki 4.8
-#define  DEFAULT_Kd 32.6
+#define  DEFAULT_Kp 24.82
+#define  DEFAULT_Ki 3.83
+#define  DEFAULT_Kd 40.22
 #endif
 
 // Extrude mintemp
