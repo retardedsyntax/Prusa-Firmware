@@ -20,12 +20,12 @@
 #define NOZZLE_TYPE "E3Dv6full"
 
 // Printer name
-#define CUSTOM_MENDEL_NAME "Prusa i3 MK3S"
+#define CUSTOM_MENDEL_NAME "Remake i3 MK3S"
 
 // Electronics
 #define MOTHERBOARD BOARD_EINSY_1_0a
 #define STEEL_SHEET
-//#define NEW_FIRST_LAYER_CAL //from front to back
+#define NEW_FIRST_LAYER_CAL //from front to back
 #define HAS_SECOND_SERIAL_PORT
 
 // PSU
